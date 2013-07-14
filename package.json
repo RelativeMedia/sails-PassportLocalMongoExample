@@ -1,0 +1,23 @@
+{
+  "name": "TestApp",
+  "private": true,
+  "version": "0.0.0",
+  "description": "a Sails application",
+  "dependencies": {
+    "sails": "0.9.0RC",
+    "grunt": "0.4.1",
+    "optimist": "0.3.4",
+    "passport": "latest",
+    "passport-local": "latest",
+    "bcrypt": "latest",
+    "sails-mongo": "git://github.com/balderdashy/sails-mongo.git"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "debug": "node debug app.js"
+  },
+  "main": "app.js",
+  "repository": "",
+  "author": "",
+  "license": ""
+}
