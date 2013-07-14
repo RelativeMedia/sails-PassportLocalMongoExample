@@ -64,3 +64,14 @@ You will notice that the password is not returned.
 ##Todos
 - Enable CSRF
 - Enable Logout
+
+##Explanation of Files, and what they do
+
+- `/config/passport.js` injects the custom middleware for passport into express
+- `/config/policies.js` this is where you define what controllers and actions are locked down by passport
+- '/config/routes.js` routes were setup for login and logout
+- `/api/controllers/AuthController.js` handles login/logout
+- `/api/controllers/UserController.js` handles user CRUD
+- `/api/models/Auth.js` has a beforeCreate method which runs the plaintext password through bcrypt, also strips out the password field from json responses
+- `/api/services/passport.js` the meat and potatoes of getting passport to work, this is where we find the user, and perform validation for login/logout
+- '/api/policies/passport.js` Session validation file, makes sure users are actually logged in when needed
