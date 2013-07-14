@@ -6,10 +6,8 @@ var passport    = require('passport'),
 function findById(id, fn) {
   User.findOne(id).done( function(err, user){
     if (err){
-      console.log(err);
       return fn(null, null);
     }else{
-      console.log('findById: ', user);
       return fn(null, user);
     }
   });
@@ -21,7 +19,6 @@ function findByUsername(u, fn) {
   }).done(function(err, user) {
     // Error handling
     if (err) {
-      console.log(err);
       return fn(null, null);
     // The User was found successfully!
     }else{
@@ -36,14 +33,11 @@ function findByUsername(u, fn) {
 // this will be as simple as storing the user ID when serializing, and finding
 // the user by ID when deserializing.
 passport.serializeUser(function(user, done) {
-  console.log('serialize user', user);
   done(null, user.id);
 });
 
 passport.deserializeUser(function(id, done) {
-  console.log('id is: ', id);
   findById(id, function (err, user) {
-    console.log('deserialize user ', user);
     done(err, user);
   });
 });
@@ -66,7 +60,6 @@ passport.use(new LocalStrategy(
         if (err) { return done(null, err); }
         if (!user) { return done(null, false, { message: 'Unknown user ' + username }); }
         bcrypt.compare(password, user.password, function(err, res) {
-      console.log('bcrypt hash check was success? ', res);
         if (!res) return done(null, false, { message: 'Invalid Password'});
         var returnUser = { username: user.username, createdAt: user.createdAt, id: user.id };
         return done(null, returnUser, { message: 'Logged In Successfully'} );
