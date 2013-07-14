@@ -1,4 +1,13 @@
 #sails-PassportLocalMongoExample
+This is a working example of how to get authentication working on sailsjs 0.9.
+
+This uses the following npm libraries:
+
+- passport
+- pasport-local
+- mongodb
+- bcrypt
+- sails-mongo
 
 ##Setup & Install
 You need to have sailsjs 0.9 installed locally and linked via NPM..
