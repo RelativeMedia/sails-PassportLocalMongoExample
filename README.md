@@ -34,7 +34,7 @@ I store all my web projects in `~/Web/Sites/`..
 ###Install mongodb, and start it with `mongod`
 I wont outline this step as it can vary from system to system. For me (on osx 10.8) it was just using brew to install
 
-**Note:** if you want to use disk based db, change the `default: 'mongo'` to `default: 'sails-disk'` in the  `/config/adapters.js` file.
+**Note:** if you want to use disk based db, change the `default: 'mongo'` to `default: 'disk'` in the  `/config/adapters.js` file.
 
 run `sails lift` in the app's directory
 
@@ -47,7 +47,7 @@ Create a User by POSTing to `/user` with the following:
 - username
 - password
 
-You should get a json response of "Login Successful"
+You should get a JSON response back of the user you just created.
 
 then try to access via GET `/user`. You should get a JSON response of "Not Authorized"
 
@@ -55,6 +55,8 @@ Now POST to `/login` with the following fields:
 
 - username
 - password
+
+You should get a json response of "Login Successful"
 
 then again try to access via GET '/user'. You should get a JSON response of the users in the database (in this example, only one.)
 
