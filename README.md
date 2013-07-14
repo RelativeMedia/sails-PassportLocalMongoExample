@@ -62,10 +62,11 @@ then again try to access via GET '/user'. You should get a JSON response of the 
 
 You will notice that the password is not returned.
 
+### Logout
+Logout is now working, just simply access `/logout`
 
 ##Todos
 - Enable CSRF
-- Enable Logout
 
 ##Explanation of Files, and what they do
 
