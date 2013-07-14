@@ -16,7 +16,8 @@ module.exports.policies = {
 	// (`true` allows public access)
 	'*': true,
 	UserController: {
-	 	'*': 'authenticated'
+	 	'*': 'authenticated',
+	 	'create': true
 	},
 	AuthController: {
 		'post login': true,

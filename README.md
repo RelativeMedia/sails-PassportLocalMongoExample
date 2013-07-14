@@ -1,20 +1,37 @@
 #sails-PassportLocalMongoExample
 
-##Getting It Running
+##Setup & Install
+You need to have sailsjs 0.9 installed locally and linked via NPM..
 
-Clone the repository, and cd into its folder:
+
+###Installing sailsjs 0.9
+cd to a directory where you want to store the sails clone.. I use `~/Web/Frameworks`..
+
+`git clone http://github.com/balderdashy/sails.git -b development sails; cd $_; npm link;`
+
+###Clone the repository, and cd into its folder:
+I store all my web projects in `~/Web/Sites/`..
 
 `git clone https://github.com/RelativeMedia/sails-PassportLocalMongoExample.git sails-auth-example; cd $_;`
 
-Run NPM Install:
+###Run NPM Link, to link the sails module defined to your local version..
+
+`npm link sails`
+
+###Run NPM Install:
 
 `npm install`
 
-install mongodb, and start it with `mongod`
+###Install mongodb, and start it with `mongod`
+I wont outline this step as it can vary from system to system. For me (on osx 10.8) it was just using brew to install
 
 **Note:** if you want to use disk based db, change the `default: 'mongo'` to `default: 'sails-disk'` in the  `/config/adapters.js` file.
 
 run `sails lift` in the app's directory
+
+
+##Getting it Working
+With the server running.
 
 Create a User by POSTing to `/user` with the following:
 
