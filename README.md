@@ -77,7 +77,7 @@ Here is an ajax Example of how you could utilize CSRF with login.. i dont necess
 ```javascript
 
 //pull the CSRF token, append it to the hidden form element #csrfField
-$.get('/csrfToken', function(csrf){ $('#csrfField').val(csrf._csrf;); });
+$.get('/csrfToken', function(csrf){ $('#csrfField').val(csrf._csrf); });
 $('#loginForm .submit').click(function(e){
   e.preventDefault();
   $.ajax({
