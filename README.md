@@ -1,7 +1,5 @@
 #sails-PassportLocalMongoExample
-This is a working example of how to get authentication working on sailsjs 0.9.
-
-**This was originally written using a pre-released version of 0.9.x. I am working on re-writing the readme and refactoring for 0.9.3. Until then use this as an example to create your own app**
+This is a working example of how to get authentication working on sailsjs 0.9.3
 
 This uses the following npm libraries:
 
@@ -12,22 +10,14 @@ This uses the following npm libraries:
 - sails-mongo
 
 ##Setup & Install
-You need to have sailsjs 0.9 installed locally and linked via NPM..
+You need to have sailsjs 0.9 installed globally on your machine..
 
-
-###Installing sailsjs 0.9
-cd to a directory where you want to store the sails clone.. I use `~/Web/Frameworks`..
-
-`git clone http://github.com/balderdashy/sails.git -b development sails; cd $_; npm link;`
+`npm install sails -g`
 
 ###Clone the repository, and cd into its folder:
 I store all my web projects in `~/Web/Sites/`..
 
 `git clone https://github.com/RelativeMedia/sails-PassportLocalMongoExample.git sails-auth-example; cd $_;`
-
-###Run NPM Link, to link the sails module defined to your local version..
-
-`npm link sails`
 
 ###Run NPM Install:
 
@@ -38,8 +28,8 @@ I wont outline this step as it can vary from system to system. For me (on osx 10
 
 **Note:** if you want to use disk based db, change the `default: 'mongo'` to `default: 'disk'` in the  `/config/adapters.js` file.
 
+##Start Sails
 run `sails lift` in the app's directory
-
 
 ##Getting it Working
 With the server running.
@@ -71,7 +61,7 @@ Logout is now working, just simply access `/logout`
 ## Enabling & Using CSRF
 Sails has an API accessible via GET `/csrfToken` to obtain a CSRF token. It expects this token to be passed for all non GET requests via a parameter titled `_csrf`
 
-To enable this modify the file `/config/csrf.js` and set `module.exports.csrf` to `true`. 
+To enable this modify the file `/config/csrf.js` and set `module.exports.csrf` to `true`.
 Before POSTing to `/login` or `/usr` issue a `GET /csrfToken` and include that as a parameter titled `_csrf`.
 
 Here is an ajax Example of how you could utilize CSRF with login.. i dont necessarily recommend this in production:
