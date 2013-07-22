@@ -5,6 +5,8 @@ This is a working example of how to get authentication working on sailsjs 0.9.3.
 This example probably doesnt adhere to best-practices, and probably shouldn't be used as-is in production.. Its just meant to give you an idea of where to start.
 That being said... on with it.
 
+----
+
 This uses the following npm libraries:
 
 - passport
