@@ -1,6 +1,8 @@
 #sails-PassportLocalMongoExample
 This is a working example of how to get authentication working on sailsjs 0.9.
 
+**This was originally written using a pre-released version of 0.9.x. I am working on re-writing the readme and refactoring for 0.9.3. Until then use this as an example to create your own app**
+
 This uses the following npm libraries:
 
 - passport
