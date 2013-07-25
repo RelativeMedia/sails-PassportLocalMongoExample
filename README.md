@@ -49,10 +49,14 @@ You should get a JSON response back of the user you just created.
 
 then try to access via GET `/user`. You should get a JSON response of "Not Authorized"
 
-Now POST to `/login` with the following fields:
+a route has been defined in `config/routes.js` to alias `POST /login` to `POST /auth/login`. So if you aren't cloning the repository
+make sure you add that route.
+
+POST to `/login` with the following fields:
 
 - username
 - password
+
 
 You should get a json response of "Login Successful"
 
