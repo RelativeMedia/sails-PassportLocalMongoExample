@@ -68,7 +68,7 @@ You will notice that the password is not returned.
 Logout is now working, just simply access `/logout`
 
 ### Require authentication to access view
-Add `'*':'authenticated'` to controller object in `config/policies.js`
+Add `'*':'authenticated'` to the controller object in `config/policies.js`
 
 Example:
 ```javascript
