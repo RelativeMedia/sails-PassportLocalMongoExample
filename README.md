@@ -67,6 +67,16 @@ You will notice that the password is not returned.
 ### Logout
 Logout is now working, just simply access `/logout`
 
+### Require authentication to access view
+Add `'*':'authenticated'` to the controller object in `config/policies.js`
+
+Example:
+```javascript
+AdminController: {
+    '*':'authenticated'
+}
+```
+
 
 ## Enabling & Using CSRF
 Sails has an API accessible via GET `/csrfToken` to obtain a CSRF token. It expects this token to be passed for all non GET requests via a parameter titled `_csrf`
