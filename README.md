@@ -74,7 +74,7 @@ AdminController: {
     '*':'authenticated'
 }
 ```
-to 'config/policies.js'
+to `config/policies.js`
 
 
 ## Enabling & Using CSRF
