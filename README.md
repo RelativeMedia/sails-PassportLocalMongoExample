@@ -68,13 +68,14 @@ You will notice that the password is not returned.
 Logout is now working, just simply access `/logout`
 
 ### Require authentication to access view
-Add 
+Add `'*':'authenticated'` to controller object in `config/policies.js`
+
+Example:
 ```javascript
 AdminController: {
     '*':'authenticated'
 }
 ```
-to `config/policies.js`
 
 
 ## Enabling & Using CSRF
