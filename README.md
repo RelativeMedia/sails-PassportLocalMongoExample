@@ -69,11 +69,11 @@ Logout is now working, just simply access `/logout`
 
 ### Require authentication to access view
 Add 
-''' javascript
+```javascript
 AdminController: {
     '*':'authenticated','
 }
-'''
+```
 to 'config/policies.js'
 
 
