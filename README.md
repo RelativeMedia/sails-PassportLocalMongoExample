@@ -71,7 +71,7 @@ Logout is now working, just simply access `/logout`
 Add 
 ```javascript
 AdminController: {
-    '*':'authenticated','
+    '*':'authenticated'
 }
 ```
 to 'config/policies.js'
