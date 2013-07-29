@@ -39,9 +39,15 @@ module.exports.adapters = {
 		database	: 'YOUR_MYSQL_DB'
 	},
 
-	// sails v.0.9.0
+	// MongoAdapter
+	// https://github.com/balderdashy/sails-mongo
 	mongo: {
-		module   : 'sails-mongo',
-		url		 : 'mongodb://localhost:27017/testapp-development'
+		module		: 'sails-mongo',
+		host		: 'localhost',
+		port		: '27017',
+		user		: '',
+		password	: '',
+		database	: 'testapp-development'
 	}
+
 };
