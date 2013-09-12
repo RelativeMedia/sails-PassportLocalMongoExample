@@ -116,4 +116,4 @@ $('#loginForm .submit').click(function(e){
 - `/api/controllers/UserController.js` handles user CRUD
 - `/api/models/User.js` has a beforeCreate method which runs the plaintext password through bcrypt, also strips out the password field from json responses
 - `/api/services/passport.js` the meat and potatoes of getting passport to work, this is where we find the user, and perform validation for login/logout
-- `/api/policies/passport.js` Session validation file, makes sure users are actually logged in when needed
+- `/api/policies/authenticated.js` Session validation file, makes sure users are actually logged in when needed
